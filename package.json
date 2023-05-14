@@ -52,7 +52,7 @@
     "gulp-nop": "0.0.3",
     "gulp-sass": "^5.1.0",
     "ora": "^5.4.1",
-    "sass": "^1.26.0"
+    "sass": "^1.35.1"
   },
   "devDependencies": {
     "element-theme-chalk": "^2.0.0",
