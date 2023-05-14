@@ -80,6 +80,7 @@ You can configure some options in `element-theme` by putting it in package.json:
 ```json
 {
   "element-theme": {
+    "debug": false,
     // "browsers": ["ie > 9", "last 2 versions"], 
     "out": "./theme",
     "config": "./element-variables.scss",
