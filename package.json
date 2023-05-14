@@ -1,0 +1,61 @@
+{
+  "name": "element-theme",
+  "version": "2.0.1",
+  "description": "Theme generator cli tool for Element",
+  "bin": {
+    "element-theme": "./bin/element-theme",
+    "et": "./bin/element-theme"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "space": true,
+    "rule": {
+      "semi": 0,
+      "unicorn/no-process-exit": 0,
+      "import/no-dynamic-require": 0
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ElementUI/element-theme.git"
+  },
+  "keywords": [
+    "element-ui",
+    "vue",
+    "theme",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/ElementUI/element-theme/issues"
+  },
+  "author": "qingwei-li <cinwell.li@gmail.com> (https://github.com/QingWei-Li)",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "element-theme-chalk": "*"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-nop": "0.0.3",
+    "gulp-sass": "^5.1.0",
+    "ora": "^5.4.1",
+    "sass": "^1.26.0"
+  },
+  "devDependencies": {
+    "element-theme-chalk": "^2.0.0",
+    "xo": "^0.54.2"
+  }
+}

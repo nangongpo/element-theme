@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 'stable'
+  - '14'
+  - '15'
+  - '16'
+  - '17'
+  - '18'

@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var main = require('../index.js')
+var check = require('../lib/gen-vars.js').check
+var config = {}
+
+console.log()
+process.on('exit', function (e) {
+  console.log()
+})
+
+program
+  .version(require('../package.json').version)
+  .option('-i --init [filePath]', 'init variables file')
+  .option('-w --watch', 'watch variable changes then build')
+  .option('-o --out [outPath]', 'output path', function (out) {config.out = out})
+  .option('-m --minimize', 'compressed file', function (minimize) {config.minimize = minimize !== false})
+  .option('-b --browsers <items>', 'set browsers', function (browsers) {config.overrideBrowserslist = browsers})
+  .option('-c --config [filePath]', 'variables file', function (c) {config.config = c})
+  .option('-d --debug', 'set debug', function (debug) {config.debug = debug !== false})
+  .parse(process.argv)
+
+check()
+
+if (program.init) {
+  return main.init(program.init)
+}
+program.watch ? main.watch(config) : main.run(config)
