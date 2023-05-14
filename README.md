@@ -40,7 +40,7 @@ et [--config variable file path] [--out theme path] [--minimize]
 
 ## Node API
 ```javascript
-var et = require('element-theme')
+import et from 'element-theme-replace'
 
 // watch mode
 et.watch({
