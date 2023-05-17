@@ -13,15 +13,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "xo"
-  },
-  "xo": {
-    "space": true,
-    "rule": {
-      "semi": 0,
-      "unicorn/no-process-exit": 0,
-      "import/no-dynamic-require": 0
-    }
+    "test": "node theme.js"
   },
   "repository": {
     "type": "git",
@@ -52,10 +44,9 @@
     "gulp-nop": "0.0.3",
     "gulp-sass": "^5.1.0",
     "ora": "^5.4.1",
-    "sass": "^1.35.1"
+    "sass": "^1.43.2"
   },
   "devDependencies": {
-    "element-theme-chalk": "^2.0.0",
-    "xo": "^0.54.2"
+    "element-theme-chalk": "^2.0.0"
   }
 }

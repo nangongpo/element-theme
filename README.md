@@ -86,7 +86,7 @@ You can configure some options in `element-theme` by putting it in package.json:
     "config": "./element-variables.scss",
     "theme": "element-theme-chalk",
     "minimize": false,
-    "components": ["button", "input"]
+    // "components": ["button", "input"]
   }
 }
 ```

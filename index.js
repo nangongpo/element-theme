@@ -21,18 +21,19 @@ const et = {
     vars.init(filePath)
   },
   watch: function (opts) {
-    et.run(opts)
-    const configPath = opts.config || config.config
-    gulp.watch(configPath, gulp.series('build'))
-    console.log('watching ' + configPath)
+    et.run(opts, () => {
+      const configPath = opts.config || config.config
+      gulp.watch(configPath, gulp.series('build'))
+      console.log('watching ' + configPath)
+    })
   },
   run: function (opts, cb) {
     gulp.task('build', build(opts))
     gulp.task('fonts', fonts(opts))
-    if (typeof cb === 'function') {
-      return gulp.series('build', 'fonts', cb);
-    }
-    return gulp.series('build', 'fonts');
+    const runTask = typeof cb === 'function' 
+      ? gulp.series('build', 'fonts', cb) 
+      : gulp.series('build', 'fonts')
+    runTask()
   }
 }
 
