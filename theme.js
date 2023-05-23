@@ -4,8 +4,8 @@ import et from '../element-theme/index.js'
 const configPath = './element-variables.scss'
 const outPath = './theme'
 
-// 生成样式变量文件
-et.init(configPath)
+// 生成样式变量文件， $--breakpoints-spec变量中的引号记得删除
+// et.init(configPath)
 
 // 实时编译模式
 // et.watch({
@@ -17,7 +17,7 @@ et.init(configPath)
 et.run({
   config: configPath, // 配置参数文件路径 默认`./element-variables.scss`
   out: outPath, // 输出目录 默认`./theme`
-  minimize: true, // 压缩文件
-  debug: false, // 调试模式
+  minimize: false, // 压缩文件
+  debug: true, // 调试模式
   // components: ['button', 'input'] // 选定组件构建自定义主题
 })
