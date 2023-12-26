@@ -2,6 +2,7 @@
  - node<12 npm install element-theme
  - node=12.x npm install element-themex
  - node>=14 npm install element-theme-replace
+ - 本项目使用Dart Sass, https://www.npmjs.com/package/sass
  - element-theme-chalk/src/common/var.scss 中 $--breakpoints-spec 语法错误, 导致生成的变量文件element-variables.scss 也有此问题，请自行修改为
     ```
     $--breakpoints-spec: (
@@ -66,6 +67,7 @@ et.watch({
 
 // build
 et.run({
+  debug: false, // 关闭警告信息
   config: 'variables/path',
   out: 'output/path',
   minimize: true
