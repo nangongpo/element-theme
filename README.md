@@ -98,7 +98,7 @@ You can configure some options in `element-theme` by putting it in package.json:
 ```json
 {
   "element-theme": {
-    "debug": false, // sass版本大于1.43.0时，关闭警告信息
+    "debug": false, // 关闭警告信息
     // "browsers": ["ie > 9", "last 2 versions"], 
     "out": "./theme",
     "config": "./element-variables.scss",
